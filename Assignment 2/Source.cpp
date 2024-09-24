@@ -57,11 +57,7 @@ int main() {
 		cout << "Last Name: " << student.LastName << ", First Name: " << student.FirstName << " , Email: " << student.StudentEmail << endl;
 	}
 #endif
-#ifdef PRE_RELEASE
-	for (const auto& student : students) {
-		cout << "Last Name: " << student.LastName << ", First Name: " << student.FirstName << " , Email: " << student.StudentEmail << endl;
-	}
-#endif
+
 	Inputfile.close();
 	return 1;
 }
