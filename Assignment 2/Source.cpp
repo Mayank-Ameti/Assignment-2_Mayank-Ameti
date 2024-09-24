@@ -54,10 +54,9 @@ int main() {
 	//Prints the Parsed data
 #ifdef DEBUG
 	for (const auto& student : students) {
-		cout << "Last Name: " << student.LastName << ", First Name: " << student.FirstName << endl;
+		cout << "Last Name: " << student.LastName << ", First Name: " << student.FirstName << " , Email: " << student.StudentEmail << endl;
 	}
 #endif
-
 #ifdef PRE_RELEASE
 	for (const auto& student : students) {
 		cout << "Last Name: " << student.LastName << ", First Name: " << student.FirstName << " , Email: " << student.StudentEmail << endl;
