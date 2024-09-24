@@ -1,7 +1,8 @@
+//MayankAmeti - CSCN73030 - Fall 2024 - Assignment 2 #
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include<sstream>
+#include <sstream>
 #include <string>
 
 using namespace std;
@@ -9,20 +10,20 @@ using namespace std;
 struct STUDENTDATA {
 	string FirstName;
 	string LastName;
-	string StudentEmail;
+	string StudentEmail; // Added student Email
 };
 
 int main() {
 
 #ifdef PRE_RELEASE
 	cout << "PreRelease Version Source Code Is Running Now" << endl;
-	ifstream Inputfile("StudentData_Emails.txt");
+	ifstream Inputfile("StudentData_Emails.txt");//Reads when  Pre-Release mode is enabled
 #else
 	cout << "Standard Version Source Code Is Running Now" << endl;
-	ifstream Inputfile("StudentData.txt");
+	ifstream Inputfile("StudentData.txt"); // Reads when pre-release mode is disabled 
 #endif
 
-	
+	//open file
 	if (!Inputfile.is_open()) {
 
 		cerr << "Unable to open file!" << std::endl;
@@ -51,13 +52,15 @@ int main() {
 	}
 	
 
-	//Prints the Parsed data
+	
 #ifdef DEBUG
 	for (const auto& student : students) {
 		cout << "Last Name: " << student.LastName << ", First Name: " << student.FirstName << " , Email: " << student.StudentEmail << endl;
 	}
 #endif
-
+	
+	//close file
 	Inputfile.close();
+	
 	return 1;
 }
