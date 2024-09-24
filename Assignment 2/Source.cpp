@@ -37,12 +37,14 @@ int main() {
 		//Storing into vector space
 		students.push_back(student);
 	}
-	Inputfile.close();
+	
 
 	//Prints the Parsed data
-	/*for (const auto& student : students) {
+#ifdef DEBUG
+	for (const auto& student : students) {
 		cout << "Last Name: " << student.LastName << ", First Name: " << student.FirstName << std::endl;
-	}*/
-
+	}
+#endif
+	Inputfile.close();
 	return 1;
 }
